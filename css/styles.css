@@ -31,16 +31,16 @@ a {
   margin-left: 15px;
 }
 
-.profile {
-  max-width: 700px;
-  margin: 0 auto;
-}
-.profile_potrait {
+.profile_portrait {
   float: left;
   width: 250px;
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
 }
 .berlin-illustration {
   align-content: center;
