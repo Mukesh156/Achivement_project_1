@@ -42,10 +42,6 @@ a {
   max-width: 700px;
   margin: 0 auto;
 }
-.profile {
-  display: flex;
-  flex-direction: column;
-}
 .berlin-illustration {
   align-content: center;
   display: flex;
