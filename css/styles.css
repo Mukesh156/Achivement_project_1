@@ -41,6 +41,8 @@ a {
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  flex-direction: row;
+  display: flex;
 }
 .berlin-illustration {
   align-content: center;
@@ -92,7 +94,6 @@ a {
 }
 
 body {
-  background-color: none;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -177,11 +178,20 @@ button:focus,
     grid-template-columns: 1fr 1fr;
   }
 }
+@media all and (min-width: 300px) and (max-width: 500px) {
+  .profile{
+    flex-direction: column;
+  }
+}
+
 @media all and (max-width: 500px) {
   .grid {
     display: grid;
     background-color: lightgray;
     grid-template-columns: 1fr;
+  }
+  .profile {
+    flex-direction:column;
   }
 }
 @media all and (max-width: 750px) {
