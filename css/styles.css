@@ -167,7 +167,7 @@ button:focus,
 .grid_item {
   background-color: lightgray;
 }
-.grid_item:last-child {
+.grid_item\:last-child {
   background-color: lightgray;
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -175,10 +175,6 @@ button:focus,
     display: grid;
     background-color: lightgray;
     grid-template-columns: 1fr 1fr;
-  }
-  .profile {
-    display: flex;
-    flex-direction: column;
   }
 }
 @media all and (max-width: 500px) {
@@ -194,7 +190,7 @@ button:focus,
     background-color: lightgray;
     grid-gap: 10px;
   }
-  .grid_item:last-child {
+  .grid_item\:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
