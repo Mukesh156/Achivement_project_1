@@ -44,11 +44,11 @@ a {
   flex-direction: row;
   display: flex;
 }
-skills-list {
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type: none;
-    font-weight: bold;
+.skills-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-weight: bold;
 }
 .berlin-illustration {
   align-content: center;
@@ -62,7 +62,7 @@ skills-list {
   }
   50% {
     fill: #fcffad;
-}
+  }
   100% {
     fill: #f76414;
   }
@@ -103,9 +103,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* Sets the font size to 16px */
   line-height: 1.6;
-  /* Sets the line-height to 1.6 */
 }
 span {
   color: red;
@@ -162,9 +160,9 @@ button:focus,
 }
 
 .p1 {
-  padding: 10px; /* Adds a 10px inner spacing to all sides*/
-  margin: 10px; /* Adds a 10px outer spacing to all sides*/
-  border: 1px solid black; /* Attributes describe: thickness, type, color*/
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
 }
 .grid {
   display: grid;
@@ -185,7 +183,7 @@ button:focus,
   }
 }
 @media all and (min-width: 300px) and (max-width: 500px) {
-  .profile{
+  .profile {
     flex-direction: column;
   }
 }
@@ -196,8 +194,8 @@ button:focus,
     background-color: lightgray;
     grid-template-columns: 1fr;
   }
-  .profile {
-    flex-direction:column;
+.profile {
+    flex-direction: column;
   }
 }
 @media all and (max-width: 750px) {
