@@ -44,6 +44,12 @@ a {
   flex-direction: row;
   display: flex;
 }
+skills-list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+    font-weight: bold;
+}
 .berlin-illustration {
   align-content: center;
   display: flex;
@@ -56,7 +62,7 @@ a {
   }
   50% {
     fill: #fcffad;
-  }
+}
   100% {
     fill: #f76414;
   }
