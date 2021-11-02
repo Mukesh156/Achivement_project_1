@@ -194,7 +194,7 @@ button:focus,
     background-color: lightgray;
     grid-template-columns: 1fr;
   }
-.profile {
+  .profile {
     flex-direction: column;
   }
 }
