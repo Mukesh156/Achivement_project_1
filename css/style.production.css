@@ -10,7 +10,7 @@ a {
 }
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 .navigation-list__item--active {
   text-decoration: none;
@@ -24,8 +24,8 @@ a {
 }
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 .page-header_item {
   text-align: right;
@@ -38,27 +38,33 @@ a {
   margin-left: 15px;
 }
 
-.profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.profile_potrait {
+.profile_portrait {
   float: left;
   width: 250px;
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
 }
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.skills-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-weight: bold;
+}
 .berlin-illustration {
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,55 +95,55 @@ a {
 }
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-  animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-  animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
 }
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-  animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
 }
 .page-footer {
   clear: both;
@@ -146,19 +152,16 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
 body {
-  background-color: none;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* Sets the font size to 16px */
   line-height: 1.6;
-  /* Sets the line-height to 1.6 */
 }
 span {
   color: red;
@@ -211,25 +214,27 @@ button:focus,
   cursor: pointer;
   opacity: 0.8;
 }
-.button__secondary {
+.button_secondary {
   background-color: #e0b354;
   color: #2b2b2b;
 }
 
 .p1 {
-  padding: 10px; /* Adds a 10px inner spacing to all sides*/
-  margin: 10px; /* Adds a 10px outer spacing to all sides*/
-  border: 1px solid black; /* Attributes describe: thickness, type, color*/
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
 }
 .grid {
   display: -ms-grid;
   display: grid;
-  background-color: lightgray;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
-.grid__item {
+.grid_item {
+  background-color: lightgray;
+}
+.grid_item\:last-child {
   background-color: lightgray;
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -241,6 +246,15 @@ button:focus,
     grid-template-columns: 1fr 1fr;
   }
 }
+@media all and (min-width: 300px) and (max-width: 500px) {
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media all and (max-width: 500px) {
   .grid {
     display: -ms-grid;
@@ -248,6 +262,12 @@ button:focus,
     background-color: lightgray;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media all and (max-width: 750px) {
@@ -257,11 +277,25 @@ button:focus,
     background-color: lightgray;
     grid-gap: 10px;
   }
-  .grid__item:last-child {
+  .grid_item\:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
   h1 {
     font-size: 22px;
   }
+}
+
+.contact-page {
+  text-align: center;
+}
+.contact-form {
+  text-align: center;
+}
+.about-page {
+  text-align: center;
+}
+.table-content {
+  margin-left: auto;
+  margin-right: auto;
 }
